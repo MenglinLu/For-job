@@ -1,0 +1,36 @@
+二叉树的链式存储：将二叉树的节点定义为一个对象，节点之间通过类似链表的链接方式来链接。
+class Bitree:
+  def __init__(self,data):
+    self.data=data
+    self.left=None
+    self.right=None
+
+二叉树的遍历：
+分为前序遍历、中序遍历、后序遍历、层次遍历
+
+前序遍历：
+def pre_order(root):
+  if(root is not None):
+    print(root.data,end=',')
+    pre_order(root.left)
+    pre_order(root.right)
+    
+pre_order(root)
+
+中序遍历：
+def in_order(root):
+  if(root is not None):
+    in_order(root.left)
+    print(root.data,end=',')
+    in_order(root.right)
+    
+in_order(root)
+
+后续遍历：
+def post_order(root):
+  if(root is not None):
+    post_order(root.left)
+    post_order(root.right)
+    print(root.data,end=',')
+    
+post_order(root)
