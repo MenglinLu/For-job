@@ -34,3 +34,23 @@ def post_order(root):
     print(root.data,end=',')
     
 post_order(root)
+
+三者给二者就可以确定唯一一棵树
+还原二叉树
+
+层次遍历：每一层从左到右
+用队列实现
+from collections import dqueue
+def level_order(root):
+queue=dqueue()
+queue.append(root)
+while(len(queue)>0):
+  node=queue.popleft()
+  print(node.data, end=',')
+  if node.left:
+    queue.append(node.left)
+  if node.right:
+    queue.append(node.right)
+
+level_order()
+def level
