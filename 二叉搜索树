@@ -1,0 +1,25 @@
+二叉搜索树是一棵二叉树且满足性质：设x是二叉树的一个节点，如果y是x左子树的节点，则y.key<=x.key；如果y是x右子树的一个节点，则y.key>=x.key
+
+二叉树可以方便实现查询、插入
+
+查询可以看做二分查找，时间复杂度 O(log2n)
+插入类似查询
+
+class bitreenode:
+  def __init__(self,data):
+    self.data=data
+    self.lchile=None
+    self.rchile=None
+  
+class BST:
+  def __init__(self):
+    self.root=None
+  
+  def insert(self,node,val):
+    if not node:
+      node=bitreenode(val)
+      
+    elif val < node.data:
+      node.lchild=self.insert(node.lchild,val)
+      nod
+    return node
